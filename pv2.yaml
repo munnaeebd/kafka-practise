@@ -1,0 +1,16 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: kafka-pv-2
+  labels:
+    type: local
+    app: kafka-pv-2
+spec:
+        #  storageClassName: nfs-sc
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /root/kafka/pv2
+

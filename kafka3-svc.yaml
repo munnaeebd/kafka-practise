@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: broker-3
+spec:
+  type: NodePort
+  ports:
+  - port: 9092
+    nodePort: 30093
+  selector:
+    kafka-set-component: kafka-3
